@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-RxSwiftLearningTests/Pods-RxSwiftLearningTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
+${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

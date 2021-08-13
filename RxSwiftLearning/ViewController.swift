@@ -37,7 +37,7 @@ class ViewController: UIViewController {
 
         let username = WYTextField(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
         username.center = CGPoint(x: view.center.x, y: 350)
-        username.placeholder = "Email"
+        username.placeholder = "邮箱"
         username.tag = 0
         username.accessibilityIdentifier = "Email"
         view.addSubview(username)
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         
         let password = WYTextField(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
         password.center = CGPoint(x: view.center.x, y: username.center.y + 60)
-        password.placeholder = "Password"
+        password.placeholder = "密码"
         password.tag = 1
         password.accessibilityIdentifier = "Password"
         view.addSubview(password)
@@ -65,12 +65,12 @@ class ViewController: UIViewController {
 
     func setupInputView() {
         let userObservable = usernameTextField.textField?.rx.text.map({ InputValidator.isValidEmail($0!) })
-        userObservable?.map({$0 ? "Email" : "输入有效邮箱地址"}).subscribe(onNext: { text in
+        userObservable?.map({$0 ? "邮箱" : "输入有效邮箱地址"}).subscribe(onNext: { text in
             self.usernameTextField.placeholder = text
         }).disposed(by: bag)
 
         let passObservable = passwordTextField.textField?.rx.text.map({ InputValidator.isValidPassword($0!) })
-        passObservable?.map({$0 ? "Password" : "密码不能少于8位"}).subscribe(onNext: { text in
+        passObservable?.map({$0 ? "密码" : "密码不能少于8位"}).subscribe(onNext: { text in
             self.passwordTextField.placeholder = text
         }).disposed(by: bag)
 

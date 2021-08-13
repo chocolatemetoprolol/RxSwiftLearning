@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1869F99A26C670AB00610E05 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869F99726C670AB00610E05 /* NetworkManager.swift */; };
+		1869F99B26C670AB00610E05 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869F99826C670AB00610E05 /* API.swift */; };
+		1869F99C26C670AB00610E05 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869F99926C670AB00610E05 /* MoyaConfig.swift */; };
+		1869F9B326C67D4A00610E05 /* APIShops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869F9B026C67D4A00610E05 /* APIShops.swift */; };
+		1869F9B426C67D4A00610E05 /* APIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869F9B126C67D4A00610E05 /* APIUser.swift */; };
+		1869F9B526C67D4A00610E05 /* APILogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869F9B226C67D4A00610E05 /* APILogin.swift */; };
 		77FED43F6D7F58D87BF73450 /* Pods_RxSwiftLearningTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD65D5B0E14DCEE10DD42BC /* Pods_RxSwiftLearningTests.framework */; };
 		81836F99BFB3A4B139CE898B /* Pods_RxSwiftLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4C7BB57B48FC786F0DD74D /* Pods_RxSwiftLearning.framework */; };
 		B11593C22615695F00D344D3 /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11593C12615695F00D344D3 /* InputValidator.swift */; };
@@ -51,6 +57,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1869F99726C670AB00610E05 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1869F99826C670AB00610E05 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		1869F99926C670AB00610E05 /* MoyaConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
+		1869F9B026C67D4A00610E05 /* APIShops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIShops.swift; sourceTree = "<group>"; };
+		1869F9B126C67D4A00610E05 /* APIUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUser.swift; sourceTree = "<group>"; };
+		1869F9B226C67D4A00610E05 /* APILogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILogin.swift; sourceTree = "<group>"; };
 		193F4395A0D1D3D85CEA48B1 /* Pods-RxSwiftLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftLearning.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftLearning/Pods-RxSwiftLearning.debug.xcconfig"; sourceTree = "<group>"; };
 		4C0FE107916FD7A7DE2D4364 /* Pods-RxSwiftLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftLearning.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftLearning/Pods-RxSwiftLearning.release.xcconfig"; sourceTree = "<group>"; };
 		537C0A9E89A6ED18E19F4160 /* Pods-RxSwiftLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftLearningTests.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftLearningTests/Pods-RxSwiftLearningTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +129,12 @@
 		B11593C02615695100D344D3 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				1869F9B226C67D4A00610E05 /* APILogin.swift */,
+				1869F9B026C67D4A00610E05 /* APIShops.swift */,
+				1869F9B126C67D4A00610E05 /* APIUser.swift */,
+				1869F99826C670AB00610E05 /* API.swift */,
+				1869F99926C670AB00610E05 /* MoyaConfig.swift */,
+				1869F99726C670AB00610E05 /* NetworkManager.swift */,
 				B11593D22615B46700D344D3 /* NetworkHelper.swift */,
 				B11593D12615B46700D344D3 /* NetworkTools.swift */,
 				B11593C12615695F00D344D3 /* InputValidator.swift */,
@@ -333,7 +351,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = WR;
 				TargetAttributes = {
 					B1D99733261461960000DDFF = {
@@ -488,16 +506,22 @@
 				B1D9973C261461960000DDFF /* ViewController.swift in Sources */,
 				B11593D32615B46700D344D3 /* NetworkTools.swift in Sources */,
 				B11593D02615B14600D344D3 /* TabelViewModel.swift in Sources */,
+				1869F99A26C670AB00610E05 /* NetworkManager.swift in Sources */,
 				B11593C82615B03C00D344D3 /* TableViewController.swift in Sources */,
 				B11593D42615B46700D344D3 /* NetworkHelper.swift in Sources */,
 				B11593C22615695F00D344D3 /* InputValidator.swift in Sources */,
 				B11593CA2615B04A00D344D3 /* CollectViewController.swift in Sources */,
+				1869F9B426C67D4A00610E05 /* APIUser.swift in Sources */,
+				1869F99C26C670AB00610E05 /* MoyaConfig.swift in Sources */,
 				B1E29B332616EC69001709CE /* CollectViewModel.swift in Sources */,
+				1869F9B526C67D4A00610E05 /* APILogin.swift in Sources */,
 				B1D99768261461DE0000DDFF /* WYTextField.swift in Sources */,
+				1869F9B326C67D4A00610E05 /* APIShops.swift in Sources */,
 				B1D99738261461960000DDFF /* AppDelegate.swift in Sources */,
 				B1E29B2C2616BC55001709CE /* CollectionViewCell.swift in Sources */,
 				B1D9976A261469040000DDFF /* WYButton.swift in Sources */,
 				B1D9973A261461960000DDFF /* SceneDelegate.swift in Sources */,
+				1869F99B26C670AB00610E05 /* API.swift in Sources */,
 				B11593CE2615B13500D344D3 /* TableModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +603,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -603,7 +628,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -639,6 +664,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -657,7 +683,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -674,6 +700,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxSwiftLearning/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -681,7 +708,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.public.RxSwiftLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -692,6 +719,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxSwiftLearning/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -699,7 +727,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.public.RxSwiftLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -707,7 +735,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE4FAEE1A103C1E5BD28A244 /* Pods-RxSwiftLearningTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxSwiftLearningTests/Info.plist;
@@ -729,7 +756,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 537C0A9E89A6ED18E19F4160 /* Pods-RxSwiftLearningTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxSwiftLearningTests/Info.plist;
@@ -750,7 +776,6 @@
 		B1D99765261461980000DDFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxSwiftLearningUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -769,7 +794,6 @@
 		B1D99766261461980000DDFF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RxSwiftLearningUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

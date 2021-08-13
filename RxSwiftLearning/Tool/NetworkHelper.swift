@@ -10,21 +10,59 @@ import Foundation
 import Moya
 import RxSwift
 import ObjectMapper
+import Alamofire
 
 final class NetworkHelper {
 
     private let moyaProvider: MoyaProvider<NetworkTool>
-
+    
+    init() {
+        let networkTool =  MoyaProvider<NetworkTool>(endpointClosure: <#T##MoyaProvider<NetworkTool>.EndpointClosure##MoyaProvider<NetworkTool>.EndpointClosure##(NetworkTool) -> Endpoint#>, requestClosure: <#T##MoyaProvider<NetworkTool>.RequestClosure##MoyaProvider<NetworkTool>.RequestClosure##(Endpoint, @escaping MoyaProvider<NetworkTool>.RequestResultClosure) -> Void#>, stubClosure: <#T##MoyaProvider<NetworkTool>.StubClosure##MoyaProvider<NetworkTool>.StubClosure##(NetworkTool) -> StubBehavior#>, callbackQueue: <#T##DispatchQueue?#>, session: <#T##Session#>, plugins: <#T##[PluginType]#>, trackInflights: <#T##Bool#>)
+        self.moyaProvider = networkTool
+    }
+    
     init(moyaProvider: MoyaProvider<NetworkTool>) {
         self.moyaProvider = moyaProvider
     }
+    
+    //MARK: 设置ssl
+    let session : Session = {
+       //证书数据
+       func certificate() -> SecCertificate? {
+           let filePath = Bundle.main.path(forResource: "存在Xcode中证书的文件名", ofType: "cer")
+           if filePath == nil {
+               return nil
+           }
+           let data = try! Data(contentsOf: URL(fileURLWithPath: filePath ?? ""))
+           let certificate = SecCertificateCreateWithData(nil, data as CFData)!
+           return certificate
+       }
+       guard let certificate = certificate() else {
+           return Session()
+       }
+       let trusPolicy = PinnedCertificatesTrustEvaluator(certificates: [certificate], acceptSelfSignedCertificates: false, performDefaultValidation: true, validateHost: true)
+       let trustManager = ServerTrustManager(evaluators: ["你证书的域名，比如www.baidu.com或者baidu.com" : trusPolicy])
+       let configuration = URLSessionConfiguration.af.default
+       return Session(configuration: configuration, serverTrustManager: trustManager)
+    }()
+    //把session当参数传进去就行了
+//    let kProvider = MoyaProvider<HXNetworkAPI>(endpointClosure: myEndpointClosure, requestClosure: requestClosure, session: session, plugins: [networkActivityPlugin], trackInflights: false)
 
     func fetchBasicInfo() -> Observable<ResponseBasicInfo> {
         return Observable.create { (observer) -> Disposable in
             let api = NetworkTool(endpoint: .getListData)
             self.requestAPI(api: api, observer: observer)
             return Disposables.create()
-        }.observeOn(SerialDispatchQueueScheduler(qos: .default))
+        }.observe(on: SerialDispatchQueueScheduler(qos: .default))
+    }
+    
+    func login(phone:NSString, password:NSString) -> Void {
+        
+//        let path = Bundle.main .path(forResource: "selfSigned_pubCA.cer", ofType: nil)
+//        let data = NSData(contentsOfFile: path!)
+//        let certificates :[SecCertificate] = [data as! SecCertificate]
+//        let policies : [String : ServerTrustPolicy] = ["172.16.88.230" : .pinCertificates(certificates: certificates, validateCertificateChain: true, validateHost: true)]
+//        let moyaProvider = MoyaProvider<NetworkTool>(endpointClosure: self.moyaProvider, requestClosure: self.moyaProvider, stubClosure: self.moyaProvider, callbackQueue: nil, session: session, plugins: [networkActivityPlugin], trackInflights: false)
     }
 
     func requestAPI<T:BaseMappable>(api: NetworkTool, observer: AnyObserver<T>) {

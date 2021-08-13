@@ -9,6 +9,7 @@
 import Foundation
 import Moya
 
+
 //请求枚举类型
 enum NetworkToolEndpoint {
     case getListData
@@ -52,7 +53,10 @@ extension NetworkTool : TargetType {
 
     //请求的方式
     var method: Moya.Method {
-        return .get
+        switch endpoint {
+        case .getListData:
+            return .get
+        }
     }
 
     //参数编码方式(这里使用URL的默认方式)

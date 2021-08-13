@@ -36,8 +36,10 @@ class TabelViewModel {
 
 extension TabelViewModel {
     fileprivate func getListData(_ text:String) -> [ListData] {
-        let networkTool =  MoyaProvider<NetworkTool>()
-        let apiHelper = NetworkHelper(moyaProvider: networkTool)
+//        let networkTool =  MoyaProvider<NetworkTool>()
+//        let apiHelper = NetworkHelper(moyaProvider: networkTool)
+        let apiHelper =   NetworkHelper();
+        
         apiHelper.fetchBasicInfo().subscribe(onNext: { [unowned self] (data) in
             if text.count > 0 {
                 let datas = data.list?.filter { (dataS) -> Bool in
